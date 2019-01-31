@@ -3,17 +3,17 @@ output "datacenterId" {
 }
 
 output "clusterId" {
-  value = "${aws_subnet.research.id}"
+  value = "${data.vsphere_compute_cluster.compute_cluster.id}"
 }
 
 output "vnetId" {
-  value = "${aws_subnet.test.id}"
+  value = "${data.vsphere_network.network.id}"
 }
 
 output "datastoreId" {
-  value = "${aws_subnet.prod.id}"
+  value = "${data.vsphere_datastore.datastore.id}"
 }
 
 output "vmtemplateId" {
-  value = "${var.aws_region}"
+  value = "${data.vsphere_virtual_machine.template.id}"
 }
