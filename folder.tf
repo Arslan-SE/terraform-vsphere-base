@@ -1,6 +1,6 @@
 // Create Folder
 resource "vsphere_folder" "folder" {
-  path              = "${var.prefix}${var.vmfolder}"
+  path              = "${var.prefix}"
   type              = "vm"
   datacenter_id     = "${data.vsphere_datacenter.dc.id}"
   tags              = ["${vsphere_tag.tagProd.id}"]
